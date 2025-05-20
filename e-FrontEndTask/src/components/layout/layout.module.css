@@ -1,0 +1,23 @@
+.layOutWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* background-color: rgba(112, 112, 238, 0.5); */
+}
+
+.mainContent{
+    display: flex;
+    flex: 1;
+}
+
+.sideBar{
+    flex: 0.2;
+    min-width: 200px;
+    background-color: rgb(72, 72, 231);
+}
+
+.productContent{
+    flex: 0.8;
+    padding: 20px;
+     background-color: rgb(172, 172, 235);
+}
