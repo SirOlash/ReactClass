@@ -1,4 +1,5 @@
 import style from './FakeStoreCard.module.css'
+import Style from './DummyJsonCard.module.css';
 import { Link } from 'react-router'
 
 const FakeStoreCard = (props) => {
@@ -6,7 +7,9 @@ const FakeStoreCard = (props) => {
     console.log(data)
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return   <div className={Style.loadingContainer}>
+                        <div className={Style.loader}></div>
+                    </div>
     }
 
     if (isError) {
@@ -23,7 +26,7 @@ const FakeStoreCard = (props) => {
                     <p><b>Category: </b>{item.category}</p>
                     <p><b>Price: ₦</b>{item.price * 1500}</p>
                     {/* <a href={`/products/${item.id}`} className={style.viewDescription}>View Product Description</a> */}
-                    <Link className= {style.viewDescription} to={`/product/${item.id}`} >View Product Description</Link>
+                    <Link className= {style.viewDescription} to={`/fake-api/product/${item.id}`} >View Product Description</Link>
                 </div>
             ))}
         </div>
